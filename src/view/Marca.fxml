@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+
+
+<GridPane fx:controller="controller.MarcaController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+
+
+    <Text text="Datos de la Marca"
+          GridPane.columnIndex="0"
+          GridPane.rowIndex="0"
+          GridPane.columnSpan="2"/>
+
+
+    <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="txtNombre"  GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <Label text="Descripcion:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextArea fx:id="txtDescripcion" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Button text="Guardar" fx:id="btnGuardar"
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="3"
+            onMouseClicked="#onClickGuardar">
+    </Button>
+    <Button text="Eliminar"
+            fx:id="btnEliminar"
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="4"
+            onMouseClicked="#onClickEliminar"></Button>
+
+    <TextField fx:id="txtId" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+</GridPane>
+
