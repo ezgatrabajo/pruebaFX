@@ -12,7 +12,7 @@ public class ScreenImpl {
     private static ScreenImpl screenImpl;
     private Parent root;
     private ScreenController screenController;
-
+    private Scene sceneActual;
     private static Stage primaryStage;
     public static final String VG_SAMPLE = "sample";
     public static final String VG_MARCAS = "marcas";
@@ -49,7 +49,7 @@ public class ScreenImpl {
         Scene scene = new Scene(root, 400, 350);
         //primaryStage.initModality(Modality.APPLICATION_MODAL);
         primaryStage.setScene(scene);
-
+        this.sceneActual = scene;
         primaryStage.setTitle(titulo);
         primaryStage.show();
     }
